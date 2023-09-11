@@ -1,0 +1,33 @@
+
+
+---
+# This is a sample Jenkins Pipeline script
+# Script is written in YAML format
+
+# Declare the required stages
+stages:
+  - build
+  - test
+  - deploy
+
+# Declare the environment variables
+variables:
+  VERSION: 1.0.0
+
+# Declare the build stage
+build:
+  stage: build
+  script:
+    - echo "Building version $VERSION"
+
+# Declare the test stage
+test:
+  stage: test
+  script:
+    - echo "Testing version $VERSION"
+
+# Declare the deployment stage
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying version $VERSION"
